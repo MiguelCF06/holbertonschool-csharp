@@ -15,7 +15,7 @@ namespace _5_print_comb
                 }
                 else
                 {
-                    Console.Write($"{i:D2}");
+                    Console.Write($"{i:D2}\n");
                 }
             }
         }
