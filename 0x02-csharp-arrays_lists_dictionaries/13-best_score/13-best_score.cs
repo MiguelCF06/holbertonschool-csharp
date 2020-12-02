@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 class Dictionary
 {
@@ -10,13 +11,12 @@ class Dictionary
             return "None";
         }
 
-        int maxScore = 0;
         string student = "";
         foreach (KeyValuePair<string, int> kvp in myList)
         {
-            if (kvp.Value > maxScore)
+            int maxValue = myList.Values.Max();
+            if (kvp.Value == maxValue)
             {
-                maxScore = kvp.Value;
                 student = kvp.Key;
             }
         }
