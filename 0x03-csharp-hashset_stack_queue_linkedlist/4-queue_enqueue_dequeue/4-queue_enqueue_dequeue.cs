@@ -11,14 +11,11 @@ class MyQueue
         }
         Console.WriteLine($"Number of items: {aQueue.Count}");
         Console.WriteLine($"First item: {aQueue.Peek()}");
+        Console.WriteLine($"Queue contains \"{search}\": {aQueue.Contains(search)}");
 
-        if (aQueue.Contains(search))
+        while (aQueue.Contains(search))
         {
-            Console.WriteLine($"Queue contains \"{search}\": {aQueue.Contains(search)}");
-            while (aQueue.Contains(search))
-            {
-                aQueue.Dequeue();
-            }
+            aQueue.Dequeue();
         }
 
         aQueue.Enqueue(newItem);
