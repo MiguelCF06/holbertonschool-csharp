@@ -43,7 +43,6 @@ namespace Enemies
             return health;
         }
 
-        /// <summary>Returns a string representation of the Zombie Object.</summary>
         public override string ToString()
         {
             return string.Format("Zombie name: {0} / Total Health: {1}", name, health);
