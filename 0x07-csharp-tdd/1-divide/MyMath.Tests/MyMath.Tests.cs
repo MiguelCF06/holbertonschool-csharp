@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace MyMath.Tests
 {
+    [TestFixture]
     public class MatrixTests
     {
         [Test]
@@ -23,9 +24,9 @@ namespace MyMath.Tests
         [Test]
         public void Divide_WhenMatrixAndNumAreOkay_ReturnsDividedMatrix()
         {
-            int [,] matrix = new int[2, 3] {{4, 34, 2}, {23, 56, 34}};
+            int [,] matrix = new int[2, 3] {{6, 36, 4}, {48, 64, 34}};
             int [,] dividedMatrix = Matrix.Divide(matrix, 2);
-            Assert.AreEqual(new int[2,3] {{2, 17, 1}, {11, 28, 17}}, dividedMatrix);
+            Assert.AreEqual(new int[2,3] {{3, 18, 2}, {24, 32, 17}}, dividedMatrix);
         }
     }
 }
