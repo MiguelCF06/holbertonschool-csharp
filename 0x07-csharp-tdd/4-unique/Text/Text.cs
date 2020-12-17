@@ -11,9 +11,6 @@ namespace Text
             if (s == null)
                 return -1;
 
-            if (s.Length == 1)
-                return 0;
-
             s = s.ToLower();
             char[] charsInS = s.ToCharArray();
             int counterOfChars;
