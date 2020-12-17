@@ -15,6 +15,14 @@ namespace MyMath.Tests
         }
 
         [Test]
+        public void When_PassingANullList_ReturnZero()
+        {
+            List<int> nums = null;
+            int result = Operations.Max(nums);
+            Assert.AreEqual(0, result);
+        }
+
+        [Test]
         public void When_PassingListNumsWithValues_ReturnTheMaxInteger()
         {
             List<int> nums = new List<int>();
