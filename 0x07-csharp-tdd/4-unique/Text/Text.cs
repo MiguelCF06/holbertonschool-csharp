@@ -10,21 +10,22 @@ namespace Text
         {
             if (s == null)
                 return -1;
-                
+
             if (s.Length == 1)
                 return 0;
 
             s = s.ToLower();
+            char[] charsInS = s.ToCharArray();
             int counterOfChars;
 
-            for (int i = 0; i < s.Length - 1; i++)
+            for (int i = 0; i < charsInS.Length - 1; i++)
             {
                 counterOfChars = 0;
-                for (int j = 0; j < s.Length - 1; j++)
+                for (int j = 0; j < charsInS.Length - 1; j++)
                 {
                     if (i != j)
                     {
-                        if (s[i] == s[j])
+                        if (charsInS[i] == charsInS[j])
                             counterOfChars += 1;
                     }
                 }
