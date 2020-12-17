@@ -9,20 +9,19 @@ namespace Text
         public static int UniqueChar(string s)
         {
             if (s == null)
-                return -1;
+                return -1;    
 
             s = s.ToLower();
-            char[] charsInS = s.ToCharArray();
             int counterOfChars;
 
-            for (int i = 0; i < charsInS.Length - 1; i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 counterOfChars = 0;
-                for (int j = 0; j < charsInS.Length - 1; j++)
+                for (int j = 0; j < s.Length; j++)
                 {
                     if (i != j)
                     {
-                        if (charsInS[i] == charsInS[j])
+                        if (s[i] == s[j])
                             counterOfChars += 1;
                     }
                 }
