@@ -32,7 +32,7 @@ namespace Text.Tests
         [Test]
         public void Unique_WhenPassingASingleChar_ReturnsIndex()
         {
-            string s = "M";
+            string s = "m";
             int index = Text.Str.UniqueChar(s);
             Assert.AreEqual(0, index);
         }
