@@ -7,21 +7,16 @@ class MatrixMath
     /// <returns>The resulting matrix</returns>
     public static double[,] MultiplyScalar(double[,] matrix, double scalar)
     {
-        double[,] result = new double[matrix.GetLength(1), matrix.GetLength(1)];
-        if ((matrix.GetLength(1) == 2) || (matrix.GetLength(1) == 3))
-        {
-            for (int i = 0; i < matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                {
-                    result[i, j] = matrix[i, j] * scalar;
+        int len1 = matrix.GetLength(1);
+        double[,] mat = new double[len1, len1];
+        if (len1 == 2 || len1 == 3) {
+            for (int i = 0; i < len1; i++) {
+                for (int j = 0; j < len1; j++) {
+                    mat[i,j] = matrix[i,j] * scalar;
                 }
             }
-            return result;
+            return mat;
         }
-        else
-        {
-            return new double[,] { { -1 } };
-        }
+        return -1;
     }
 }
