@@ -7,7 +7,7 @@ class VectorMath
     /// <returns>The length of the vector</returns>
     public static double Magnitude(double[] vector)
     {
-        double result = 0;
+        double result = -1;
 
         if (vector.Length == 2)
         {
@@ -19,7 +19,7 @@ class VectorMath
         }
         else
         {
-            result = -1;
+            return result;
         }
         return result;
     }
