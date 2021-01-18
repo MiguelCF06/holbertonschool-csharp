@@ -9,9 +9,6 @@ class VectorMath
     {
         double result = 0;
 
-        if (vector.Length < 2)
-            return -1;
-
         if (vector.Length == 2)
         {
             result = Math.Round(Math.Sqrt(Math.Pow(vector[0], 2) + Math.Pow(vector[1], 2)), 1);
@@ -19,6 +16,10 @@ class VectorMath
         else if (vector.Length == 3)
         {
             result = Math.Round(Math.Sqrt(Math.Pow(vector[0], 2) + Math.Pow(vector[1], 2) + Math.Pow(vector[2], 2)), 1);
+        }
+        else
+        {
+            result = -1;
         }
         return result;
     }
