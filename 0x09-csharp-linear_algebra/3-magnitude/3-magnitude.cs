@@ -3,7 +3,7 @@
 /// <summary>Represents a Vector Operations class</summary>
 class VectorMath
 {
-    /// <summary>Calculates the length of a given <param name="vector"/>vector that can be 2D or 3D.</summary>
+    /// <summary>Calculates the length of a given <paramref name="vector"/>vector that can be 2D or 3D.</summary>
     /// <returns>The length of the vector</returns>
     public static double Magnitude(double[] vector)
     {
