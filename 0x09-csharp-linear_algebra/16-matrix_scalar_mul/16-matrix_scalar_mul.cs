@@ -3,7 +3,7 @@
 /// <summary>Represents a Matrix Operations class</summary>
 class MatrixMath
 {
-    /// <summary>Multiplies a matrix <paramref name="matrix1"/> and a scalar <paramref name="matrix2"/>that can be 2D or 3D.</summary>
+    /// <summary>Multiplies a matrix <paramref name="matrix"/> and a scalar <paramref name="scalar"/></summary>
     /// <returns>The resulting matrix</returns>
     public static double[,] MultiplyScalar(double[,] matrix, double scalar)
     {
