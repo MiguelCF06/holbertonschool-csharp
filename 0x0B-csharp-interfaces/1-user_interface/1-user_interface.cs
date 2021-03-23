@@ -17,7 +17,9 @@ public abstract class Base
 ///<summary>A test class that inherits from base and all the created interfaces</summary>
 class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
+    ///<summary>The durability of the object</summary>
     public int durability {get; set;}
+    ///<summary>The state of the object (collected/not collected)</summary>
     public bool isCollected {get; set;}
 
     ///<summary>Happens when the object wants to interact with something</summary>    
