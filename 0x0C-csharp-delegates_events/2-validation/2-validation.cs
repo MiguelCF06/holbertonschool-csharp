@@ -60,7 +60,7 @@ class Player
     {
         if (newHp < 0)
             this.hp = 0;
-        else if (newHp >= maxHp)
+        else if (newHp > maxHp)
             this.hp = maxHp;
         else
             this.hp = newHp;
