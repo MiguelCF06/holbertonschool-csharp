@@ -82,7 +82,7 @@ class Player
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
         if (modifier == Modifier.Weak)
-            return baseValue / 2;
+            return baseValue / 2f;
         else if (modifier == Modifier.Base)
             return baseValue;
         else
