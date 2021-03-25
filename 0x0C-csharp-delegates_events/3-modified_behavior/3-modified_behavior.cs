@@ -2,8 +2,11 @@
 
 /// <summary>Delegate that calculate the health of the player when Heals or Receive damage, takes as parameters the <paramref name="amount" /> of Heal or Damage</summary>
 public delegate void CalculateHealth(float amount);
-/// <summary>Delegate that calculate the amount of health or damage based on its modifier</summary>
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
+
+/// <summary>Determines the strength of attack modifer. </summary>
+/// <param name="baseValue">Normal attack.</param>
+/// <param name="modifier">Modifier to apply to baseValue.</param>
+delegate float CalculateModifier(float baseValue, Modifier modifier);
 
 enum Modifier
 {
@@ -76,13 +79,13 @@ class Player
     }
 
     /// <summary>Apply a modifier to the amount of (Heal/Damage) Depending of it is (Weak, Base or Strong)</summary>
-    public void ApplyModifier(float baseValue, Modifier modifier)
+    public float ApplyModifier(float baseValue, Modifier modifier)
     {
         if (modifier == Modifier.Weak)
             return baseValue / 2;
         else if (modifier == Modifier.Base)
             return baseValue;
-        else if (modifier == Modifier.Strong)
+        else
             return baseValue * 1.5f;
     }
 }
