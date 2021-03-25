@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// <summary>Delegate that calculate the health of the player when Heals or Receive damage, takes as parameters the <paramref name="amount" /> of Heal or Damage</summary>
-public delegate void CalculateHealth(float amount);
+delegate void CalculateHealth(float amount);
 
 /// <summary>Determines the strength of attack modifer. </summary>
 /// <param name="baseValue">Normal attack.</param>
