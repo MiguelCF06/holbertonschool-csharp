@@ -58,7 +58,7 @@ class Player
     /// <summary>Check the new amount of hp after (Heal/Damage) and sets it to the Actual hp of the player.</summary>
     public void ValidateHP(float newHp)
     {
-        if (newHp <= 0)
+        if (newHp < 0)
             this.hp = 0;
         else if (newHp >= maxHp)
             this.hp = maxHp;
