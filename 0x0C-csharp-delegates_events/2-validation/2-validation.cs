@@ -38,7 +38,7 @@ class Player
         else
             Console.WriteLine($"{this.name} takes {damage} damage!");
 
-        newHp = hp - damage;
+        newHp = this.hp - damage;
         ValidateHP(newHp);
     }
 
@@ -51,7 +51,7 @@ class Player
         else
             Console.WriteLine($"{this.name} heals {heal} HP!");
 
-        newHp = hp + heal;
+        newHp = this.hp + heal;
         ValidateHP(newHp);
     }
 
